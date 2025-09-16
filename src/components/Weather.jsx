@@ -14,15 +14,13 @@ function Weather({ uniti, latS, lonS }) {
   useEffect(() => {
     const apiUrl = latS && lonS 
   ? `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latS}&lon=${lonS}`
-  : "http://ip-api.com/json/";
+  : "https://ipapi.co/json/";
 
 axios.get(apiUrl).then((response) => {
-  const lat = latS || response.data.lat;
-  const lon = lonS || response.data.lon;
-  
+  const lat = latS || response.data.latitude;
+  const lon = lonS || response.data.longitude;
   
   if (latS && lonS) {
-    
     const modifiedParam = {
       data: {
         city: response.data.address?.city || response.data.address?.town || "city not found",
@@ -31,8 +29,13 @@ axios.get(apiUrl).then((response) => {
     };
     setparam(modifiedParam);
   } else {
-    
-    setparam(response);
+    const modifiedParam = {
+      data: {
+        city: response.data.city || "Unknown city",
+        country: response.data.country_name || "Unknown country"
+      }
+    };
+    setparam(modifiedParam);
   }
   
       axios
