@@ -1,9 +1,12 @@
 @import "styles/Nav.css";
 @import "styles/Hero.css";
+@import "styles/Weather.css";
 
 #root {
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
+  position: relative;
+  height: fit-content;
 }
 body{
   padding: 0;
@@ -12,10 +15,11 @@ body{
 .page{
   position: relative;
   margin: 0;
+  
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
   background-color: hsl(243, 96%, 9%);
   box-sizing: border-box;
 }

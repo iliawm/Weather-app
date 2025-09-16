@@ -104,6 +104,7 @@
 .openback.open{
     display: block;
     animation: dropdown 0.4s ease-out forwards;
+    z-index: 2;
 }
 @keyframes rotation {
     0%{transform: rotate(360deg);

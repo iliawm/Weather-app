@@ -19,7 +19,7 @@
     font-weight: 700;
     position: relative;
     top:0 ;
-    z-index: 1;
+    z-index: 0;
 }
 .wrap{
     position: relative;
@@ -37,7 +37,6 @@
     /* border: 1px solid red; */
     width: 100%;
     margin-bottom: 20px;
-    
     margin-right: 50px;
     right: 0px;
     border-radius: 8px;
@@ -64,6 +63,8 @@
     border: transparent;
     outline: none;
     appearance: none;
+    color: white;
+    font-weight: 800;
 }
 .searchcont:hover{
     transform: scale(1.1);
@@ -89,7 +90,9 @@
     .wrap{
         flex-direction: row;
         width: 50vw;
-        max-width: unset;
+        left: -40px;
+        align-self: center;
+        max-width: 600px;
     }
     .searchbtn{
         width: 30%;
@@ -112,5 +115,7 @@
     border: transparent;
     outline: none;
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 }
