@@ -3,12 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-<<<<<<< HEAD
-  "homepage": "https://iliawm.github.io/Weather-app"
-,
-=======
   "homepage": "https://iliawm.github.io/Weather-app",
->>>>>>> fbc03e492a08dd954d7ab0c58f76e048d51810cc
   "scripts": {
     "dev": "vite",
     "build": "vite build",
